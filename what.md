@@ -5,7 +5,7 @@ It is the long-term change of temperature and weather patterns worldwide
 
 ## Causes
 - Burning fossil fuels
-  - ICE cars
+  - Transport
   - Factories
   - Power plants
 - Farming livestock
