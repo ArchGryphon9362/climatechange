@@ -7,6 +7,7 @@ class Presentation(tk.Canvas):
         b.pack()
         self.parent = parent
         self.parent.attributes('-fullscreen', True)
+        self.configure(bg='black')
 
     def quit(self):
         self.fade_away()
