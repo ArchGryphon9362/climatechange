@@ -2,16 +2,20 @@ import tkinter as tk
 
 class Presentation(tk.Canvas):
     def __init__(self, parent):
-        tk.Frame.__init__(self, parent)
-        b = tk.Button(self, text="Click to fade away", command=self.quit)
-        b.attributes("-alpha", 0)
-        b.pack()
+        tk.Canvas.__init__(self, parent)
+        # b = tk.Button(self, text="Click to fade away", command=self.quit)
+        self.rect1 = self.create_rectangle(50, 50, 150, 150, fill='red')
+        self.tag_bind(self.rect1, "<1>", self.quit)
+        # b.attributes("-alpha", 0)
+        # b.pack()
         self.parent = parent
         self.parent.attributes('-fullscreen', True)
         self.configure(bg='black')
-        self.fade_in(b)
+        # self.fade_in(b)
 
-    def quit(self):
+    def quit(self, event):
+        print(str(event))
+        self.itemconfig(self.rect1, fill='blue')
         self.fade_away()
 
     def fade_away(self):
