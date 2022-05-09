@@ -1,0 +1,1 @@
+# todo, put repetetive, long functions in here
