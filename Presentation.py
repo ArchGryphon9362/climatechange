@@ -1,7 +1,8 @@
 import tkinter as tk
+from Flow import Flow
 
 class Presentation(tk.Canvas):
-    def __init__(self, parent, main_func):
+    def __init__(self, parent, flow: Flow):
         # Do default function of tk.Canvas
         tk.Canvas.__init__(self, parent)
         # Save the root and generate window width and heigh as 50% of fullscreen as single time scaling is easier than figuring scaling out dynamically
@@ -13,10 +14,10 @@ class Presentation(tk.Canvas):
         self.parent.resizable(False, False)
 
         # Set everything up
-        self.startup(main_func)
+        self.startup(flow)
 
-    def startup(self, main_func):
-        main_func(self)
+    def startup(self, flow):
+        flow.start(self)
         # self.rect1 = self.create_rectangle(50, 50, 150, 150, fill='red')
         # self.tag_bind(self.rect1, "<1>", self.quit)
         # self.addtag_withtag("scale", self.rect1)

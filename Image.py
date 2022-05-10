@@ -1,3 +1,5 @@
-class Image:
+from Element import Element
+
+class Image(Element):
     def __init__(self):
-        pass
+        Element.__init__(self)
