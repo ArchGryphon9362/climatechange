@@ -14,4 +14,7 @@ class Flow:
 
         self.canvas = canvas
         self.canvas.configure(bg='black')
-        Button(canvas, 0, 0, 10, 50)
+        mainbtn = Button(canvas, 0, 0, 100, 100)
+        mainbtn.move_easeinout_to(1503, 855, show=True)
+        mainbtn.move_easeinout_to(1467, 745, show=True)
+        mainbtn.vh_centre()

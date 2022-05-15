@@ -7,5 +7,7 @@ from Flow import Flow
 if __name__ == "__main__":
     flow = Flow()
     root = tk.Tk()
-    Presentation(root, flow.start).pack(fill="both", expand=True)
+    presentation = Presentation(root)
+    presentation.pack(fill="both", expand=True)
+    presentation.startup(flow)
     root.mainloop()
