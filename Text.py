@@ -20,5 +20,5 @@ class Text(Element):
                 largest_w = width
         w = largest_w / (self.canvas.w / 1280)
         h = tk_font.metrics()
-        h = (h['ascent'] + h['descent']) / (self.canvas.h / 720)
+        h = (h['ascent'] + h['descent']) / (self.canvas.h / 720) * (text.count("\n") + 1)
         Element.__init__(self, canvas, w, h, id, hide=hide)

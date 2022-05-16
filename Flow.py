@@ -45,6 +45,22 @@ patterns worldwide"""
         self.s1_image.unload()
         self.s1_next_button.unload()
         
+        self.s2_title = Text(self.canvas, -400, 50, "What Causes Climate Change?", size=-50, color="white", bold=True)
+        self.s2_title.move_easeinout_to(self.s2_title.get_h_centre(), show=True)
+        self.s2_text = Text(self.canvas, -400, 0,
+"""There is a multitude of things
+that cause climate change, here
+are some:
+- Burning fossil fuels
+  - Transport
+  - Factories
+  - Power plants
+- Farming livestock
+- Volcanic Activity
+- Cutting down forests"""
+        , color="white", size=-30)
+        self.s2_text.move(*self.s2_text.get_v_centre())
+        self.s2_text.move_easeinout_to((40, self.s2_text.get_h_centre()[1]), show=True)
         self.s2_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
         self.s2_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s2_next_button, fill="white", onclick=self.s3)
         self.s2_next_button.move_easeinout_to((1180, 680), show=True)
