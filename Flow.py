@@ -35,8 +35,8 @@ patterns worldwide"""
         self.s1_image = Image(self.canvas, 1280, 0, 750, 400, "images/s1_img.jpg")
         self.s1_image.move(*self.s1_image.get_v_centre())
         self.s1_image.move_easeinout_to((600, self.s1_image.get_h_centre()[1]), show=True)
-        self.s1_next_button = Text(self.canvas, 0, 0, "Continue", color="white", bold=True)
-        self.s1_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s1_next_button, onclick=self.s2)
+        self.s1_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
+        self.s1_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s1_next_button, fill="white", onclick=self.s2)
         self.s1_next_button.move_easeinout_to((1180, 680), show=True)
 
     def s2(self, _):
@@ -45,8 +45,8 @@ patterns worldwide"""
         self.s1_image.unload()
         self.s1_next_button.unload()
         
-        self.s2_next_button = Text(self.canvas, 0, 0, "Continue", color="white", bold=True)
-        self.s2_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s2_next_button, onclick=self.s3)
+        self.s2_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
+        self.s2_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s2_next_button, fill="white", onclick=self.s3)
         self.s2_next_button.move_easeinout_to((1180, 680), show=True)
 
     def s3(self, _):
