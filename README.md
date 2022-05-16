@@ -1,6 +1,8 @@
 # Climate Change Informer
 To start the program, make sure you are running Python 3.
 
-To start the program run `main.py` using python (`python main.py`)
+Make sure you have all dependencies by running `pip install -r requirements.txt`
 
-(very unfinished, only supports buttons and text at the moment, the presentation/quiz itself is not at all started)
+To start the program run `python main.py`
+
+(almost finished, the presentation/quiz itself is in progress)
