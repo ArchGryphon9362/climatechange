@@ -13,6 +13,6 @@ class Image(Element):
                 int(h * (self.canvas.h / 720))
             )
         )
-        self.tk_image = ImageTk.PhotoImage(self.pil_image)
-        self.id = self.canvas.create_image(x, y, image=self.tk_image, anchor=NW)
+        self.canvas.images.append(ImageTk.PhotoImage(self.pil_image))
+        self.id = self.canvas.create_image(x, y, image=self.canvas.images[-1], anchor=NW)
         Element.__init__(self, canvas, w, h, self.id, hide=hide)

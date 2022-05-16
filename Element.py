@@ -19,13 +19,13 @@ class Element:
         self.canvas.moveto(self.id, x1, y1)
 
     def get_v_centre(self):
-        x = self.canvas.coords(self.id)[0]
+        x = self.canvas.coords(self.id)[0] / (self.canvas.w / 1280)
         y = (720 / 2) - self.h / 2
         return (x, y)
 
     def get_h_centre(self):
         x = (1280 / 2) - self.w / 2
-        y = self.canvas.coords(self.id)[1]
+        y = self.canvas.coords(self.id)[1] / (self.canvas.h / 720)
         return (x, y)
 
     def get_vh_centre(self):

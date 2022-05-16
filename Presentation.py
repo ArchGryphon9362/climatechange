@@ -1,11 +1,12 @@
 import tkinter as tk
 
 class Presentation(tk.Canvas):
-    def __init__(self, parent):
+    def __init__(self, parent, images):
         # Do default function of tk.Canvas
         tk.Canvas.__init__(self, parent)
         # Save the root and generate window width and heigh as 50% of fullscreen as single time scaling is easier than figuring scaling out dynamically
         self.parent = parent
+        self.images = images
         self.w = self.parent.winfo_screenwidth() * 0.5
         self.h = int(self.w / 16 * 9)
         # Set the width + height and disable resizing
