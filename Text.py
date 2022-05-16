@@ -3,8 +3,9 @@ import tkinter.font as tkFont
 from Element import Element
 
 class Text(Element):
-    def __init__(self, canvas: tk.Canvas, x, y, text, font="Helvetica", size=12, color="black", bold=False, italic=False, hide=True):
+    def __init__(self, canvas: tk.Canvas, x, y, text, font="Helvetica", size=-20, color="black", bold=False, italic=False, hide=True):
         self.canvas = canvas
+        size = int(size * (self.canvas.w / 1280))
         tk_font = tkFont.Font(
             size=size,
             family=font,
