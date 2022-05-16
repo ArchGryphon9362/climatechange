@@ -16,7 +16,7 @@ class Flow:
         self.climate_change_text = Rectangle(canvas, -200, 150, 600, 80, text=self.climate_change_text, transparency=0.6)
         self.climate_change_text.move_easeinout_to(self.climate_change_text.get_h_centre(), show=True)
         self.start_button = Text(canvas, 0, 0, "Start!", size=-30, bold=True)
-        self.start_button = Rectangle(canvas, 0, 720, 125, 75, text=self.start_button, fill="white", transparency=0.6, onclick=self.quiz_1)
+        self.start_button = Rectangle(canvas, 0, 720, 125, 75, text=self.start_button, fill="white", transparency=0.6, onclick=self.s1)
         self.start_button.move(*self.start_button.get_h_centre())
         self.start_button.move_easeinout_to(self.start_button.get_vh_centre(), show=True)
 
@@ -125,12 +125,9 @@ and restoring anything that we took from the planet."""
         self.s4_next_button.move_easeinout_to((1180, 680), show=True)
 
     def quiz_1(self, _):
-        self.main_image.unload()
-        self.climate_change_text.unload()
-        self.start_button.unload()
-        # self.s4_title.unload()
-        # self.s4_text.unload()
-        # self.s4_next_button.unload()
+        self.s4_title.unload()
+        self.s4_text.unload()
+        self.s4_next_button.unload()
 
         self.quiz_title = Text(self.canvas, -400, 50, "Quiz!", size=-50, color="white", bold=True)
         self.quiz_title.move_easeinout_to(self.quiz_title.get_h_centre(), show=True)
