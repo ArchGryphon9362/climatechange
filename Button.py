@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import CENTER
 import random
 from Text import Text
 from Image import Image
@@ -10,6 +11,10 @@ class Button(Element):
         id = self.canvas.create_rectangle(x, y, x + w, y + h, fill=fill, outline=outline)
         self.canvas.tag_bind(id, "<1>", onclick)
         self.text = text
+        self.image = image
+        if self.image:
+            self.canvas.tag_bind(image.id, "<1>", onclick)
+            self.canvas.tag_raise(image.id)
         if self.text:
             self.canvas.tag_bind(text.id, "<1>", onclick)
             self.canvas.tag_raise(text.id)
@@ -20,6 +25,10 @@ class Button(Element):
             x1 = x + self.w / 2 - self.text.w / 2
             y1 = y + self.h / 2 - self.text.h / 2
             self.text.move(x1, y1)
+        if self.image:
+            x1 = x + self.w / 2 - self.image.w / 2
+            y1 = y + self.h / 2 - self.image.h / 2
+            self.image.move(x1, y1)
         Element.move(self, x, y)
 
     def show(self):

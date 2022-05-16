@@ -16,8 +16,8 @@ class Flow:
         self.canvas = canvas
         self.canvas.configure(bg='white')
         text = Text(canvas, 300, 200, "Click Me!", color="#ccccff", bold=True)
-        mb = Button(canvas, 0, 0, 100, 100, fill="#ff00ff", outline="#00ff00", text=text, onclick=print)
         image = Image(canvas, 0, 0, 100, 100, "images/profile.png", hide=False)
+        mb = Button(canvas, 0, 0, 100, 100, fill="#ff00ff", outline="#00ff00", text=text, image=image, onclick=print)
         # image.move_easeinout_to((0, 300), show=True)
         mb.move_easeinout_to((987, 489), show=True)
         mb.move_easeinout_to((456, 346))

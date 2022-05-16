@@ -15,4 +15,4 @@ class Image(Element):
         )
         self.tk_image = ImageTk.PhotoImage(self.pil_image)
         self.id = self.canvas.create_image(x, y, image=self.tk_image, anchor=NW)
-        Element.__init__(self, canvas, w, h, id, hide=hide)
+        Element.__init__(self, canvas, w, h, self.id, hide=hide)
