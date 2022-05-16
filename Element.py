@@ -16,20 +16,20 @@ class Element:
     def move(self, x, y):
         self.canvas.moveto(self.id, x, y)
 
-    def v_centre(self):
+    def get_v_centre(self):
         x = self.canvas.coords(self.id)[0]
         y = 540 - self.h / 2
-        self.move_easeinout_to(x, y)
+        return (x, y)
 
-    def h_centre(self):
+    def get_h_centre(self):
         x = 960 - self.w / 2
         y = self.canvas.coords(self.id)[1]
-        self.move_easeinout_to(x, y)
+        return (x, y)
 
-    def vh_centre(self):
+    def get_vh_centre(self):
         x = 960 - self.w / 2
         y = 540 - self.h / 2
-        self.move_easeinout_to(x, y)
+        return (x, y)
     
     # the framerate, and therefore the time given are not in any way accurate, so there
     # might be sligt discrepancies between systems, but we don't care as all we're doing
@@ -58,8 +58,10 @@ class Element:
         if hide:
             self.hide()
 
-    def move_easeinout_to(self, x, y, time_s = 0.5, fps=60, show=False, hide=False):
+    def move_easeinout_to(self, xy_to, time_s = 0.5, fps=60, show=False, hide=False):
         xy = self.canvas.coords(self.id)
+        x = xy_to[0]
+        y = xy_to[1]
         x1 = xy[0]
         y1 = xy[1]
         self.move_easeinout(x1, y1, x, y, time_s, fps, show, hide)
