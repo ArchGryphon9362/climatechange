@@ -23,5 +23,11 @@ class Flow:
         self.climate_change_text.unload()
         self.start_button.unload()
 
-        self.s1_title = Text(self.canvas, -200, 50, "What Is Climate Change?", size=-50, color="black", bold=True)
+        self.s1_title = Text(self.canvas, -200, 50, "What Is Climate Change?", size=-50, bold=True)
         self.s1_title.move_easeinout_to(self.s1_title.get_h_centre(), show=True)
+        self.s1_text = Text(self.canvas, -400, 0, "Climate change is the long-term\nchange of temperature and weather\npatterns worldwide", size=-30)
+        self.s1_text.move(*self.s1_text.get_v_centre())
+        self.s1_text.move_easeinout_to((40, self.s1_text.get_h_centre()[1]), show=True)
+        self.s1_image = Image(self.canvas, 1280, 0, 750, 400, "images/s1_img.jpg")
+        self.s1_image.move(*self.s1_image.get_v_centre())
+        self.s1_image.move_easeinout_to((600, self.s1_image.get_h_centre()[1]), show=True)
