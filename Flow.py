@@ -19,3 +19,4 @@ class Flow:
         mb.move_easeinout_to((456, 346))
         mb.move_easeinout_to(mb.get_vh_centre())
         text = Text(canvas, 300, 200, "Hello!", hide=False)
+        text.move_easeinout_to(text.get_vh_centre())

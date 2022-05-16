@@ -10,4 +10,4 @@ class Button(Element):
         tags = (random.randint(0, 1000))
         id = self.canvas.create_rectangle(x, y, x + w, y + h, fill=fill, outline=outline)
         self.canvas.tag_bind(id, "<1>", onclick)
-        Element.__init__(self, canvas, id, hide=hide)
+        Element.__init__(self, canvas, id, w=w, h=h, hide=hide)

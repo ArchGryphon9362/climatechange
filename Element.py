@@ -2,14 +2,15 @@ import time
 from Presentation import Presentation
 
 class Element:
-    def __init__(self, canvas: Presentation, id, hide=True):
+    def __init__(self, canvas: Presentation, id, w=None, h=None, hide=True):
         self.canvas = canvas
         self.id = id
         self.canvas.addtag_withtag("scale", self.id)
         self.canvas.scale_unscaled()
         # size gets influenced by scaling, get new size
-        self.w = self.canvas.bbox(id)[2] - self.canvas.coords(id)[0]
-        self.h = self.canvas.bbox(id)[3] - self.canvas.coords(id)[1]
+        self.w = w if w else self.canvas.bbox(id)[2] - self.canvas.coords(id)[0]
+        self.h = h if h else self.canvas.bbox(id)[3] - self.canvas.coords(id)[1]
+        print(self.w, self.h)
         if hide:
             self.hide()
 
@@ -31,6 +32,7 @@ class Element:
     def get_vh_centre(self):
         x = (1280 / 2) - self.w / 2
         y = (720 / 2) - self.h / 2
+        print(x, y)
         return (x, y)
     
     # the framerate, and therefore the time given are not in any way accurate, so there
