@@ -1,6 +1,6 @@
 # Climate Change Informer
-To start the program, make sure you have tkinter install, and are running Python 3.
+To start the program, make sure you are running Python 3.
 
-To start the program run `main.py` using python
+To start the program run `main.py` using python (`python main.py`)
 
-(very unfinished)
+(very unfinished, only supports buttons and text at the moment, the presentation/quiz itself is not at all started)
