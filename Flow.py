@@ -14,11 +14,11 @@ class Flow:
         self.climate_change_text = Rectangle(canvas, -200, 150, 600, 80, text=self.climate_change_text, transparency=0.6)
         self.climate_change_text.move_easeinout_to(self.climate_change_text.get_h_centre(), show=True)
         self.start_button = Text(canvas, 0, 0, "Start!", size=-30, bold=True)
-        self.start_button = Rectangle(canvas, 0, 720, 125, 75, text=self.start_button, fill="white", transparency=0.6, onclick=self.begin)
+        self.start_button = Rectangle(canvas, 0, 720, 125, 75, text=self.start_button, fill="white", transparency=0.6, onclick=self.s1)
         self.start_button.move(*self.start_button.get_h_centre())
         self.start_button.move_easeinout_to(self.start_button.get_vh_centre(), show=True)
 
-    def begin(self, event):
+    def s1(self, _):
         self.main_image.unload()
         self.climate_change_text.unload()
         self.start_button.unload()
@@ -31,3 +31,13 @@ class Flow:
         self.s1_image = Image(self.canvas, 1280, 0, 750, 400, "images/s1_img.jpg")
         self.s1_image.move(*self.s1_image.get_v_centre())
         self.s1_image.move_easeinout_to((600, self.s1_image.get_h_centre()[1]), show=True)
+        self.s1_next_button = Text(self.canvas, 0, 0, "Continue", color="white", bold=True)
+        self.s1_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s1_next_button, onclick=self.s2)
+        self.s1_next_button.move_easeinout_to((1180, 680), show=True)
+        self.s1_next_button.show()
+
+    def s2(self, _):
+        self.s1_title.unload()
+        self.s1_text.unload()
+        self.s1_image.unload()
+        self.s1_next_button.unload()
