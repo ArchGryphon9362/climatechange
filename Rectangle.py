@@ -24,9 +24,15 @@ class Rectangle(Element):
         if self.image:
             self.canvas.tag_bind(self.image.id, "<1>", onclick)
             self.canvas.tag_raise(self.image.id)
+            x1 = x + w / 2 - self.image.w / 2
+            y1 = y + h / 2 - self.image.h / 2
+            self.image.move(x1, y1)
         if self.text:
             self.canvas.tag_bind(text.id, "<1>", onclick)
             self.canvas.tag_raise(text.id)
+            x1 = x + w / 2 - self.text.w / 2
+            y1 = y + h / 2 - self.text.h / 2
+            self.text.move(x1, y1)
         Element.__init__(self, canvas, w, h, id, hide=hide)
 
     def move(self, x, y):

@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import NW
 import tkinter.font as tkFont
 from Element import Element
 
@@ -12,7 +13,7 @@ class Text(Element):
             weight=("bold" if bold else "normal"),
             slant=("italic" if italic else "roman")
         )
-        id = self.canvas.create_text(x, y, fill=color, text=text, font=tk_font)
+        id = self.canvas.create_text(x, y, fill=color, text=text, font=tk_font, anchor=NW)
         largest_w = 0
         for line in text.split("\n"):
             width = tk_font.measure(line)
