@@ -8,7 +8,7 @@ from Image import Image
 class Flow:
     def start(self, canvas: Presentation):
         self.canvas = canvas
-        self.canvas.configure(bg='white')
+        self.canvas.configure(bg='black')
         self.main_image = Image(canvas, 0, 0, 1280, 720, "images/start.jpeg", hide=False)
         self.climate_change_text = Text(canvas, 0, 0, "Climate Change Informer", size=-50, color="white", bold=True)
         self.climate_change_text = Rectangle(canvas, -200, 150, 600, 80, text=self.climate_change_text, transparency=0.6)
@@ -23,13 +23,13 @@ class Flow:
         self.climate_change_text.unload()
         self.start_button.unload()
 
-        self.s1_title = Text(self.canvas, -200, 50, "What Is Climate Change?", size=-50, bold=True)
+        self.s1_title = Text(self.canvas, -400, 50, "What Is Climate Change?", size=-50, color="white", bold=True)
         self.s1_title.move_easeinout_to(self.s1_title.get_h_centre(), show=True)
         self.s1_text = Text(self.canvas, -400, 0,
 """Climate change is the long-term
 change of temperature and weather
 patterns worldwide"""
-        , size=-30)
+        , color="white", size=-30)
         self.s1_text.move(*self.s1_text.get_v_centre())
         self.s1_text.move_easeinout_to((40, self.s1_text.get_h_centre()[1]), show=True)
         self.s1_image = Image(self.canvas, 1280, 0, 750, 400, "images/s1_img.jpg")
