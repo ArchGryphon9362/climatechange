@@ -61,10 +61,18 @@ are some:
         , color="white", size=-30)
         self.s2_text.move(*self.s2_text.get_v_centre())
         self.s2_text.move_easeinout_to((40, self.s2_text.get_h_centre()[1]), show=True)
+        self.s2_image = Image(self.canvas, 1280, 0, 750, 400, "images/s2_img.jpg")
+        self.s2_image.move(*self.s2_image.get_v_centre())
+        self.s2_image.move_easeinout_to((600, self.s2_image.get_h_centre()[1]), show=True)
         self.s2_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
         self.s2_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s2_next_button, fill="white", onclick=self.s3)
         self.s2_next_button.move_easeinout_to((1180, 680), show=True)
 
     def s3(self, _):
+        self.s2_title.unload()
+        self.s2_text.unload()
+        self.s2_image.unload()
+        self.s2_next_button.unload()
+
         exit()
         self.s2_next_button.unload()
