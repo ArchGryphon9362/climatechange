@@ -12,4 +12,7 @@ class Text(Element):
             slant=("italic" if italic else "roman")
         )
         id = self.canvas.create_text(x, y, fill=color, text=text, font=tk_font)
-        Element.__init__(self, canvas, id, hide=hide)
+        w = tk_font.measure(text) / (self.canvas.w / 1280)
+        h = tk_font.metrics()
+        h = (h['ascent'] + h['descent']) / (self.canvas.h / 720)
+        Element.__init__(self, canvas, id, w=w, h=h, hide=hide)
