@@ -22,3 +22,6 @@ class Flow:
         self.main_image.unload()
         self.climate_change_text.unload()
         self.start_button.unload()
+
+        self.s1_title = Text(self.canvas, -200, 50, "What Is Climate Change?", size=-50, color="black", bold=True)
+        self.s1_title.move_easeinout_to(self.s1_title.get_h_centre(), show=True)
