@@ -10,6 +10,7 @@ class Flow:
         print("Main Flow Initialized")
 
     def start(self, canvas: Presentation):
+        global image
         print("Hello there person reading the console :)")
 
         self.canvas = canvas
