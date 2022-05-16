@@ -29,7 +29,6 @@ class Element:
     def vh_centre(self):
         x = 960 - self.w / 2
         y = 540 - self.h / 2
-        print(x, y)
         self.move_easeinout_to(x, y)
     
     # the framerate, and therefore the time given are not in any way accurate, so there
