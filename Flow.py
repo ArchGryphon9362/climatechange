@@ -15,6 +15,6 @@ class Flow:
         self.canvas = canvas
         self.canvas.configure(bg='black')
         mb = Button(canvas, 0, 0, 100, 100, onclick=print)
-        mb.move_easeinout_to((1503, 855), show=True)
-        mb.move_easeinout_to((1467, 745), show=True)
+        mb.move_easeinout_to((987, 489), show=True)
+        mb.move_easeinout_to((456, 346))
         mb.move_easeinout_to(mb.get_vh_centre())
