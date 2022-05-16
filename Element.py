@@ -8,8 +8,8 @@ class Element:
         self.canvas.addtag_withtag("scale", self.id)
         self.canvas.scale_unscaled()
         # size gets influenced by scaling, get new size
-        self.w = self.canvas.coords(id)[2] - self.canvas.coords(id)[0]
-        self.h = self.canvas.coords(id)[3] - self.canvas.coords(id)[1]
+        self.w = self.canvas.bbox(id)[2] - self.canvas.coords(id)[0]
+        self.h = self.canvas.bbox(id)[3] - self.canvas.coords(id)[1]
         if hide:
             self.hide()
 
