@@ -15,4 +15,4 @@ class Text(Element):
         w = tk_font.measure(text) / (self.canvas.w / 1280)
         h = tk_font.metrics()
         h = (h['ascent'] + h['descent']) / (self.canvas.h / 720)
-        Element.__init__(self, canvas, id, w=w, h=h, hide=hide)
+        Element.__init__(self, canvas, w, h, id, hide=hide)

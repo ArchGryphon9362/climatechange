@@ -13,7 +13,7 @@ class Button(Element):
         if self.text:
             self.canvas.tag_bind(text.id, "<1>", onclick)
             self.canvas.tag_raise(text.id)
-        Element.__init__(self, canvas, id, w=w, h=h, hide=hide)
+        Element.__init__(self, canvas, w, h, id, hide=hide)
 
     def move(self, x, y):
         if self.text:

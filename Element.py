@@ -2,14 +2,14 @@ import time
 from Presentation import Presentation
 
 class Element:
-    def __init__(self, canvas: Presentation, id, w=None, h=None, hide=True):
+    def __init__(self, canvas: Presentation, w, h, id, hide=True):
         self.canvas = canvas
         self.id = id
         self.canvas.addtag_withtag("scale", self.id)
         self.canvas.scale_unscaled()
         # size gets influenced by scaling, get new size
-        self.w = w if w else self.canvas.bbox(id)[2] - self.canvas.coords(id)[0]
-        self.h = h if h else self.canvas.bbox(id)[3] - self.canvas.coords(id)[1]
+        self.w = w
+        self.h = h
         if hide:
             self.hide()
 
