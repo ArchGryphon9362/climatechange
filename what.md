@@ -13,7 +13,7 @@ It is the long-term change of temperature and weather patterns worldwide
 - Cutting down forests
 
 ## Results
-- Glaciers melts
+- Glaciers melt
   - Rising sea levels
     - Flooding
 - Heat waves

@@ -8,7 +8,7 @@ from Image import Image
 class Flow:
     def start(self, canvas: Presentation):
         self.canvas = canvas
-        self.canvas.configure(bg='black')
+        self.canvas.configure(bg='#000011')
         self.main_image = Image(canvas, 0, 0, 1280, 720, "images/start.jpeg", hide=False)
         self.climate_change_text = Text(canvas, 0, 0, "Climate Change Informer", size=-50, color="white", bold=True)
         self.climate_change_text = Rectangle(canvas, -200, 150, 600, 80, text=self.climate_change_text, transparency=0.6)
@@ -73,6 +73,31 @@ are some:
         self.s2_text.unload()
         self.s2_image.unload()
         self.s2_next_button.unload()
+        
+        self.s3_title = Text(self.canvas, -400, 50, "What Are The Results Of Climate Change?", size=-50, color="white", bold=True)
+        self.s3_title.move_easeinout_to(self.s3_title.get_h_centre(), show=True)
+        self.s3_text = Text(self.canvas, -400, 0,
+"""Climate change causes way to
+much damage for what it's worth,
+here's some of what the results
+are:
+- Glaciers melt
+  - Rising sea levels
+    - Flooding
+- Heat waves
+- Drought
+- Warming oceans
+- Animals harmed
+- More common extreme weather"""
+        , color="white", size=-30)
+        self.s3_text.move(*self.s3_text.get_v_centre())
+        self.s3_text.move_easeinout_to((40, self.s3_text.get_h_centre()[1]), show=True)
+        self.s3_image = Image(self.canvas, 1280, 0, 600, 450, "images/s3_img.jpg")
+        self.s3_image.move(*self.s3_image.get_v_centre())
+        self.s3_image.move_easeinout_to((600, self.s3_image.get_h_centre()[1]), show=True)
+        self.s3_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
+        self.s3_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s3_next_button, fill="white", onclick=self.s4)
+        self.s3_next_button.move_easeinout_to((1180, 680), show=True)
 
+    def s4(self, _):
         exit()
-        self.s2_next_button.unload()
