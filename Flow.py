@@ -38,7 +38,7 @@ patterns worldwide"""
         self.s1_image.move(*self.s1_image.get_v_centre())
         self.s1_image.move_easeinout_to((600, self.s1_image.get_h_centre()[1]), show=True)
         self.s1_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.s1_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s1_next_button, fill="white", onclick=self.s2)
+        self.s1_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s1_next_button, fill="white", outline="white", onclick=self.s2)
         self.s1_next_button.move_easeinout_to((1180, 680), show=True)
 
     def s2(self, _):
@@ -67,7 +67,7 @@ are some:
         self.s2_image.move(*self.s2_image.get_v_centre())
         self.s2_image.move_easeinout_to((600, self.s2_image.get_h_centre()[1]), show=True)
         self.s2_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.s2_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s2_next_button, fill="white", onclick=self.s3)
+        self.s2_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s2_next_button, fill="white", outline="white", onclick=self.s3)
         self.s2_next_button.move_easeinout_to((1180, 680), show=True)
 
     def s3(self, _):
@@ -98,7 +98,7 @@ are:
         self.s3_image.move(*self.s3_image.get_v_centre())
         self.s3_image.move_easeinout_to((600, self.s3_image.get_h_centre()[1]), show=True)
         self.s3_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.s3_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s3_next_button, fill="white", onclick=self.s4)
+        self.s3_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s3_next_button, fill="white", outline="white", onclick=self.s4)
         self.s3_next_button.move_easeinout_to((1180, 680), show=True)
 
     def s4(self, _):
@@ -121,7 +121,7 @@ and restoring anything that we took from the planet."""
         self.s4_text.move(*self.s4_text.get_v_centre())
         self.s4_text.move_easeinout_to(self.s4_text.get_vh_centre(), show=True)
         self.s4_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.s4_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s4_next_button, fill="white", onclick=self.quiz_1)
+        self.s4_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s4_next_button, fill="white", outline="white", onclick=self.quiz_1)
         self.s4_next_button.move_easeinout_to((1180, 680), show=True)
 
     def quiz_1(self, _):
@@ -137,7 +137,7 @@ and restoring anything that we took from the planet."""
         self.quiz_1_text.move_easeinout_to(self.quiz_1_text.get_h_centre(), show=True)
         right_answers = ["It is long term change of\nthe weather patterns",
                          "It is humans destroying\nthe planet",
-                         "It is humans refusing\nto change their behavious\ndespite knowledge of their\nworst issues",
+                         "It is humans refusing\nto change their behaviour\ndespite knowledge of their\nworst issues",
                          "It is littering",
                          "It is farming livestock"]
         wrong_answers = ["It is humans trying to\nfix the plantet",
@@ -186,7 +186,7 @@ and restoring anything that we took from the planet."""
         self.quiz_1_text.move_easeinout_to(self.quiz_1_text.get_h_centre(), show=True)
         self.quiz_1_text.move_easeinout_to(self.quiz_1_text.get_h_centre(), show=True)
         self.quiz_1_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.quiz_1_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_1_next_button, fill="white", onclick=self.quiz_2)
+        self.quiz_1_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_1_next_button, fill="white", outline="white", onclick=self.quiz_2)
         self.quiz_1_next_button.move_easeinout_to((1180, 680), show=True)
 
     def quiz_1_wrong(self, _):
@@ -203,7 +203,7 @@ The correct answer was:
         , color="white", size=-30)
         self.quiz_1_text.move_easeinout_to(self.quiz_1_text.get_h_centre(), show=True)
         self.quiz_1_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.quiz_1_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_1_next_button, fill="white", onclick=self.quiz_2)
+        self.quiz_1_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_1_next_button, fill="white", outline="white", onclick=self.quiz_2)
         self.quiz_1_next_button.move_easeinout_to((1180, 680), show=True)
 
     def quiz_2(self, _):
@@ -265,7 +265,7 @@ The correct answer was:
         , color="white", size=-30)
         self.quiz_2_text.move_easeinout_to(self.quiz_2_text.get_h_centre(), show=True)
         self.quiz_2_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.quiz_2_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_2_next_button, fill="white", onclick=self.quiz_3)
+        self.quiz_2_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_2_next_button, fill="white", outline="white", onclick=self.quiz_3)
         self.quiz_2_next_button.move_easeinout_to((1180, 680), show=True)
 
     def quiz_2_wrong(self, _):
@@ -283,7 +283,7 @@ The correct answer was:
         , color="white", size=-30)
         self.quiz_2_text.move_easeinout_to(self.quiz_2_text.get_h_centre(), show=True)
         self.quiz_2_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.quiz_2_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_2_next_button, fill="white", onclick=self.quiz_3)
+        self.quiz_2_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_2_next_button, fill="white", outline="white", onclick=self.quiz_3)
         self.quiz_2_next_button.move_easeinout_to((1180, 680), show=True)
 
     def quiz_3(self, _):
@@ -345,7 +345,7 @@ The correct answer was:
         , color="white", size=-30)
         self.quiz_3_text.move_easeinout_to(self.quiz_3_text.get_h_centre(), show=True)
         self.quiz_3_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.quiz_3_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_3_next_button, fill="white", onclick=self.finish)
+        self.quiz_3_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_3_next_button, fill="white", outline="white", onclick=self.finish)
         self.quiz_3_next_button.move_easeinout_to((1180, 680), show=True)
 
     def quiz_3_wrong(self, _):
@@ -363,7 +363,7 @@ The correct answer was:
         , color="white", size=-30)
         self.quiz_3_text.move_easeinout_to(self.quiz_3_text.get_h_centre(), show=True)
         self.quiz_3_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.quiz_3_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_3_next_button, fill="white", onclick=self.finish)
+        self.quiz_3_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.quiz_3_next_button, fill="white", outline="white", onclick=self.finish)
         self.quiz_3_next_button.move_easeinout_to((1180, 680), show=True)
 
     def finish(self, _):
@@ -381,7 +381,7 @@ P.S. Your score was """ + str(self.total_right) + "/3!"
         , color="white", size=-40)
         self.end_text.move_easeinout_to(self.end_text.get_h_centre(), show=True)
         self.quiz_3_next_button = Text(self.canvas, 0, 0, "Finish", bold=True)
-        self.quiz_3_next_button = Rectangle(self.canvas, 1280, 720, 75, 40, text=self.quiz_3_next_button, fill="white", onclick=self.exit)
+        self.quiz_3_next_button = Rectangle(self.canvas, 1280, 720, 75, 40, text=self.quiz_3_next_button, fill="white", outline="white", onclick=self.exit)
         self.quiz_3_next_button.move_easeinout_to((1205, 680), show=True)
 
     def exit(self, _):
