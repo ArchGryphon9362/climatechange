@@ -77,7 +77,7 @@ are some:
         self.s3_title = Text(self.canvas, -400, 50, "What Are The Results Of Climate Change?", size=-50, color="white", bold=True)
         self.s3_title.move_easeinout_to(self.s3_title.get_h_centre(), show=True)
         self.s3_text = Text(self.canvas, -400, 0,
-"""Climate change causes way to
+"""Climate change causes way too
 much damage for what it's worth,
 here's some of what the results
 are:
@@ -100,4 +100,27 @@ are:
         self.s3_next_button.move_easeinout_to((1180, 680), show=True)
 
     def s4(self, _):
+        self.s3_title.unload()
+        self.s3_text.unload()
+        self.s3_image.unload()
+        self.s3_next_button.unload()
+        
+        self.s4_title = Text(self.canvas, -400, 50, "What Can We Do To Fix/Improve It?", size=-50, color="white", bold=True)
+        self.s4_title.move_easeinout_to(self.s4_title.get_h_centre(), show=True)
+        self.s4_text = Text(self.canvas, -600, 0,
+"""Well, not much really, mainly, we need to stop doing
+anything that's causing it. Mainly, we need to switch to
+more vegan based products, and stop consuming/using
+livestock for anything.
+
+We can also give back to the planet by planting more trees,
+and restoring anything that we took from the planet."""
+        , color="white", size=-30)
+        self.s4_text.move(*self.s4_text.get_v_centre())
+        self.s4_text.move_easeinout_to(self.s4_text.get_vh_centre(), show=True)
+        self.s4_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
+        self.s4_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s4_next_button, fill="white", onclick=self.quiz)
+        self.s4_next_button.move_easeinout_to((1180, 680), show=True)
+
+    def quiz(self, _):
         exit()
