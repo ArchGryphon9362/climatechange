@@ -1,5 +1,6 @@
 import tkinter as tk
 import Utility as ut
+import webbrowser
 import random
 import math
 from Presentation import Presentation
@@ -13,7 +14,7 @@ class Flow:
         self.canvas.configure(bg='#000011')
         self.main_image = Image(canvas, 0, 0, 1280, 720, "images/start.jpeg", hide=False)
         self.climate_change_text = Text(canvas, 0, 0, "Climate Change Informer", size=-50, color="white", bold=True)
-        self.climate_change_text = Rectangle(canvas, -200, 150, 600, 80, text=self.climate_change_text, transparency=0.6)
+        self.climate_change_text = Rectangle(canvas, -500, 150, 600, 80, text=self.climate_change_text, transparency=0.6)
         self.climate_change_text.move_easeinout_to(self.climate_change_text.get_h_centre(), show=True)
         self.start_button = Text(canvas, 0, 0, "Start!", size=-30, bold=True)
         self.start_button = Rectangle(canvas, 0, 720, 125, 75, text=self.start_button, fill="white", transparency=0.6, onclick=self.s1)
@@ -380,9 +381,19 @@ the quiz. Have a good day!
 P.S. Your score was """ + str(self.total_right) + "/3!"
         , color="white", size=-40)
         self.end_text.move_easeinout_to(self.end_text.get_h_centre(), show=True)
+        self.pfp = Image(self.canvas, 0, 0, 50, 50, "images/profile.png")
+        self.pfp = Rectangle(self.canvas, -55, 665, 50, 50, image=self.pfp, onclick=self.github, transparency=0)
+        self.pfp.move_easeinout_to((5, 665), show=True)
+        self.name = Text(self.canvas, 60, 720, "Lex Nastin", color="white", bold=True)
+        self.name.move_easeinout_to((60, 665), show=True)
+        self.clickme = Text(self.canvas, 60, 745, "<- Click on me", color="white")
+        self.clickme.move_easeinout_to((60, 690), show=True)
         self.quiz_3_next_button = Text(self.canvas, 0, 0, "Finish", bold=True)
         self.quiz_3_next_button = Rectangle(self.canvas, 1280, 720, 75, 40, text=self.quiz_3_next_button, fill="white", outline="white", onclick=self.exit)
         self.quiz_3_next_button.move_easeinout_to((1205, 680), show=True)
+
+    def github(self, _):
+        webbrowser.open("https://www.github.com/ArchGryphon9362")
 
     def exit(self, _):
         exit()
