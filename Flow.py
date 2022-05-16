@@ -119,8 +119,17 @@ and restoring anything that we took from the planet."""
         self.s4_text.move(*self.s4_text.get_v_centre())
         self.s4_text.move_easeinout_to(self.s4_text.get_vh_centre(), show=True)
         self.s4_next_button = Text(self.canvas, 0, 0, "Continue", bold=True)
-        self.s4_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s4_next_button, fill="white", onclick=self.quiz)
+        self.s4_next_button = Rectangle(self.canvas, 1280, 720, 100, 40, text=self.s4_next_button, fill="white", onclick=self.quiz_1)
         self.s4_next_button.move_easeinout_to((1180, 680), show=True)
 
-    def quiz(self, _):
-        exit()
+    def quiz_1(self, _):
+        self.s4_title.unload()
+        self.s4_text.unload()
+        self.s4_next_button.unload()
+
+        self.quiz_title = Text(self.canvas, -400, 50, "Quiz!", size=-50, color="white", bold=True)
+        self.quiz_title.move_easeinout_to(self.quiz_title.get_h_centre(), show=True)
+        self.s5_text = Text(self.canvas, -600, 125,
+"""What is climate change?"""
+        , color="white", size=-40)
+        self.s5_text.move_easeinout_to(self.s5_text.get_h_centre(), show=True)
