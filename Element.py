@@ -16,7 +16,15 @@ class Element:
     def move(self, x, y):
         x1 = x * (self.canvas.w / 1280)
         y1 = y * (self.canvas.h / 720)
-        self.canvas.moveto(self.id, x1, y1)
+        if self.canvas.moveto_support:
+            self.canvas.moveto(self.id, x1, y1)
+        else:
+            c = self.canvas.coords(self.id)
+            x2 = c[0]
+            y2 = c[1]
+            x2 = (x1 - x2) # * (self.canvas.w / 1280)
+            y2 = (y1 - y2) # * (self.canvas.h / 720)
+            self.canvas.move(self.id, x2, y2)
 
     def get_v_centre(self):
         x = self.canvas.coords(self.id)[0] / (self.canvas.w / 1280)

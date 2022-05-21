@@ -10,6 +10,9 @@ class Presentation(tk.Canvas):
         self.w = self.parent.winfo_screenwidth() * 0.5
         self.h = int(self.w / 16 * 9)
         # Set the width + height and disable resizing
+        self.moveto_support = hasattr(self, 'moveto')
+        if not self.moveto_support:
+            print("tkinter.Canvas.moveto is not supported (Used for absolute positioning). Using tkinter.Canvas.move (Relative) instead.")
         self.config(width=self.w, height=self.h)
         self.parent.resizable(False, False)
 
